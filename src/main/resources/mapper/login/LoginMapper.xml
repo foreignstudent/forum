@@ -4,7 +4,7 @@
 
 <mapper namespace= "com.forum.login.mapper.LoginMapper" >
 
-    <select id = "queryUser" resultType= "string">
-      select ID from USER
+    <select id = "userCheck" resultType= "Integer">
+    	select count(1) from acc_pwd t where 1 = 1 and t.account = #{account} and t.password= #{pwd}
     </select>
 </mapper>
